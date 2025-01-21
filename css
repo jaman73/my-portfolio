@@ -1,63 +1,73 @@
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     color: #333;
-    line-height: 1.6;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
 header {
     background: #333;
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-header .menu {
+.nav-links {
     list-style: none;
     display: flex;
     gap: 1rem;
 }
 
-header .menu li a {
+.nav-links li a {
     text-decoration: none;
     color: #fff;
+    padding: 0.5rem;
     transition: color 0.3s;
 }
 
-header .menu li a:hover {
+.nav-links li a:hover {
     color: #f39c12;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Hero Section */
 #hero {
-    background: url('../assets/images/hero.jpg') no-repeat center center/cover;
-    color: #fff;
     height: 100vh;
+    background: url('../assets/hero-bg.jpg') no-repeat center center/cover;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    color: #fff;
     text-align: center;
-}
-
-#hero h1 {
-    font-size: 3rem;
-}
-
-#hero p {
-    margin: 1rem 0;
 }
 
 #hero .btn {
     background: #f39c12;
     color: #fff;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
@@ -67,27 +77,15 @@ header .menu li a:hover {
     background: #e67e22;
 }
 
+/* Sections */
 section {
-    padding: 4rem 2rem;
+    padding: 4rem 0;
 }
 
-#projects .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
-    background: #f9f9f9;
-}
-
+/* Footer */
 footer {
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
     background: #333;
     color: #fff;
 }
